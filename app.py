@@ -1,4 +1,4 @@
-from flask import Flask,render_template, redirect, url_for
+from flask import Flask,render_template, redirect, url_for,request
 
 app = Flask(__name__)
 
@@ -6,7 +6,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
-
+@app.route("/generate",methods=["GET","POST"])
+def generate():
+    search_text = request.form.get("search_text")
+    return f'You entered: {search_text}'
 
 
 

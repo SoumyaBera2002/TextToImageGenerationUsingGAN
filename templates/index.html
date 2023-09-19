@@ -80,16 +80,18 @@
         </div>
     </nav>
 
-    <div class="container search-container">
-        <div class="row">
-            <div class="col-md-8">
-                <input type="text" class="search-input" placeholder="Enter the description..." />
-            </div>
-            <div class="col-md-4">
-                <button class="search-button">Search</button>
+    <form action="generate" method="post">
+        <div class="container search-container">
+            <div class="row">
+                <div class="col-md-8">
+                    <input type="text" class="search-input" name="search_text" placeholder="Enter the description..." />
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="search-button">Search</button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>
