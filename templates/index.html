@@ -8,26 +8,26 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <style>
         body {
-            background-image: url('../static/Bg-img.jpg');
-            background-size: 100% 100%; 
+            background-image: url("../static/Bg-img.jpg");
+            background-size: 100% 100%;
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
             padding: 0;
             position: relative;
             background-position: center center;
-            min-height: 100vh; 
+            min-height: 100vh;
             min-width: 1000px;
         }
-        
+
         .navbar {
             background-color: rgba(0, 0, 0, 0.573);
         }
-        
+
         .navbar-brand {
             color: #fff;
         }
-        
+
         .search-container {
             display: flex;
             justify-content: center;
@@ -37,7 +37,7 @@
             margin-top: 20px;
             border-radius: 10px;
         }
-        
+
         .search-input {
             width: 100%;
             min-width: 700px;
@@ -50,7 +50,7 @@
             color: white;
             caret-color: white;
         }
-        
+
         .search-button {
             padding: 10px 25px;
             background-color: rgba(0, 0, 0, 0.646);
@@ -60,47 +60,51 @@
             color: white;
             font-size: 16px;
             cursor: pointer;
-            margin-left: 90px; /* Adjust the margin as needed */
+            margin-left: 90px;
+            /* Adjust the margin as needed */
         }
-        
+
         .search-button:hover {
             background-color: whitesmoke;
             color: black;
         }
-        /* Media query for mobile phones */
-@media (max-width: 600px) {
-    body {
-        background-size: cover; /* Show the full background image while maintaining aspect ratio */
-        background-position: center;
-    }
 
-    .navbar {
-        width: 100%; /* Expand navbar to full width */
-    }
+        @media (max-width: 600px) {
+            body {
+                background-size: cover;
+                background-position: center;
+            }
 
-    .search-container {
-        width: 100%; /* Expand search container to full width */
-        flex-direction: column; /* Stack elements vertically */
-        padding: 15px; /* Increased padding for better spacing */
-        margin-top: 20px;
-        border-radius: 10px;
-    }
+            .navbar {
+                width: 100%;
+                max-height: 50px;
+            }
 
-    .search-input {
-        width: 100%; /* Expand search input to full container width */
-        padding: 15px; /* Increased padding for better spacing */
-        font-size: 16px; /* Adjusted font size for readability */
-        margin-bottom: 15px; /* Increased space between input and button */
-    }
+            .search-container {
+                width: 100%;
+                max-height: 50px;
+                flex-direction: column;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
 
-    .search-button {
-        width: 100%; /* Expand search button to full container width */
-        padding: 15px 20px; /* Adjusted padding for better visibility */
-        font-size: 16px; /* Adjusted font size for readability */
-        margin-left: 0; /* Remove left margin to align with input */
-    }
-}
+            .search-input {
+                width: 100%;
+                max-height: 25px;
+                padding: 15px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
 
+            .search-button {
+                width: 100%;
+                max-height: 25px;
+                padding: 15px 20px;
+                font-size: 16px;
+                margin-left: 0;
+            }
+        }
     </style>
     <title>IMAGINE-X-AI</title>
 </head>
