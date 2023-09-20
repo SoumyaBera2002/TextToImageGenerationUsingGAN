@@ -13,7 +13,7 @@ def home():
 @app.route("/generate",methods=["GET","POST"])
 def generate():
     search_text = request.form.get("search_text")
-    return f'You entered: {search_text}'
+    return render_template("generate.html",search_text=search_text)
 
 
 
