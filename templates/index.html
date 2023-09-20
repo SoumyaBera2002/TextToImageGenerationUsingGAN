@@ -9,46 +9,48 @@
     <style>
         body {
             background-image: url('../static/Bg-img.jpg');
-            background-size: cover;
+            background-size: 100% 100%; 
             background-repeat: no-repeat;
             background-attachment: fixed;
             margin: 0;
             padding: 0;
             position: relative;
+            background-position: center center;
+            min-height: 100vh; 
+            min-width: 1000px;
         }
-
         
         .navbar {
             background-color: rgba(0, 0, 0, 0.573);
         }
-
+        
         .navbar-brand {
             color: #fff;
         }
-
+        
         .search-container {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            background-color: rgba(0, 0, 0, 0.3); 
+            background-color: rgba(0, 0, 0, 0.3);
             padding: 20px;
             margin-top: 20px;
             border-radius: 10px;
         }
-
+        
         .search-input {
             width: 100%;
-            min-width: 700px; 
+            min-width: 700px;
             padding: 10px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             outline: none;
             background-color: rgba(0, 0, 0, 0.541);
-            color: white; 
+            color: white;
             caret-color: white;
         }
-
+        
         .search-button {
             padding: 10px 25px;
             background-color: rgba(0, 0, 0, 0.646);
@@ -60,10 +62,37 @@
             cursor: pointer;
             margin-left: 90px; /* Adjust the margin as needed */
         }
-
+        
         .search-button:hover {
             background-color: whitesmoke;
             color: black;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-size: cover; /* Show the full background image while maintaining aspect ratio */
+                background-position: center;
+            }
+        
+            .search-container {
+                flex-direction: column; /* Stack elements vertically */
+                padding: 10px;
+                margin-top: 20px;
+                border-radius: 10px;
+            }
+        
+            .search-input {
+                width: 100%; /* Expand to full container width */
+                padding: 10px;
+                font-size: 14px;
+                margin-bottom: 10px; /* Add space between input and button */
+            }
+        
+            .search-button {
+                width: 100%; /* Expand to full container width */
+                padding: 10px 20px;
+                font-size: 14px;
+                margin-left: 0; /* Remove left margin to align with input */
+            }
         }
     </style>
     <title>IMAGINE-X-AI</title>
