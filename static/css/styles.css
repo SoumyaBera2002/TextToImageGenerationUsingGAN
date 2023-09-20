@@ -25,36 +25,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.475);
     padding: 20px;
-    margin-top: 20px;
     border-radius: 10px;
+    border: 1px solid black;
+    margin-left: 20%;
+    margin-top: 17%;
 }
 
 .search-input {
     width: 100%;
     min-width: 700px;
     padding: 10px;
-    border: none;
-    border-radius: 5px;
+    border: 1px solid black;
+    border-radius: 35px;
     font-size: 16px;
     outline: none;
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.76);
     color: white;
     caret-color: white;
+    margin-left: 0.5%;
 }
 
 .search-button {
     padding: 10px 25px;
-    background-color: rgba(0, 0, 0, 0.646);
-    border: none;
+    background-color: rgba(0, 0, 0, 0.758);
+    border: 1px solid black;
     border-radius: 15px;
     font-weight: 700;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-left: 90px;
-    /* Adjust the margin as needed */
+    margin-left: 60%; /* Adjust the margin as needed */
 }
 
 .search-button:hover {
@@ -74,32 +78,32 @@ body {
     }
 
     .search-container {
-        width: 100%;
+        width: 95%;
         padding: 15px;
         border-radius: 10px;
         display: flex;
         flex-direction: column; /* Stack elements vertically */
         justify-content: center; /* Center vertically */
         align-items: center; /* Center horizontally */
-        margin-top: 100px;
+        margin-top: 50%;
+        margin-left: 2.5%;
     }
-    
+
     .search-input {
-        width: 100%;
+        width: 100%; /* Expand to full container width */
         height: 100px;
         padding: 15px;
         font-size: 16px;
         margin-bottom: 15px;
     }
-    
+
     .search-button {
-        width: 100%;
+        width: 100%; /* Expand to full container width */
         height: 100px;
         padding: 15px 20px;
         font-size: 18px;
-        font-weight: 700px;
+        font-weight: 700;
         margin-left: 0;
     }
 }
-
 
