@@ -67,33 +67,40 @@
             background-color: whitesmoke;
             color: black;
         }
-        @media (max-width: 600px) {
-            body {
-                background-size: cover; /* Show the full background image while maintaining aspect ratio */
-                background-position: center;
-            }
-        
-            .search-container {
-                flex-direction: column; /* Stack elements vertically */
-                padding: 10px;
-                margin-top: 20px;
-                border-radius: 10px;
-            }
-        
-            .search-input {
-                width: 100%; /* Expand to full container width */
-                padding: 10px;
-                font-size: 14px;
-                margin-bottom: 10px; /* Add space between input and button */
-            }
-        
-            .search-button {
-                width: 100%; /* Expand to full container width */
-                padding: 10px 20px;
-                font-size: 14px;
-                margin-left: 0; /* Remove left margin to align with input */
-            }
-        }
+        /* Media query for mobile phones */
+@media (max-width: 600px) {
+    body {
+        background-size: cover; /* Show the full background image while maintaining aspect ratio */
+        background-position: center;
+    }
+
+    .navbar {
+        width: 100%; /* Expand navbar to full width */
+    }
+
+    .search-container {
+        width: 100%; /* Expand search container to full width */
+        flex-direction: column; /* Stack elements vertically */
+        padding: 15px; /* Increased padding for better spacing */
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    .search-input {
+        width: 100%; /* Expand search input to full container width */
+        padding: 15px; /* Increased padding for better spacing */
+        font-size: 16px; /* Adjusted font size for readability */
+        margin-bottom: 15px; /* Increased space between input and button */
+    }
+
+    .search-button {
+        width: 100%; /* Expand search button to full container width */
+        padding: 15px 20px; /* Adjusted padding for better visibility */
+        font-size: 16px; /* Adjusted font size for readability */
+        margin-left: 0; /* Remove left margin to align with input */
+    }
+}
+
     </style>
     <title>IMAGINE-X-AI</title>
 </head>
