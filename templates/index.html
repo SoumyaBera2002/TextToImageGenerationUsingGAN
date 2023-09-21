@@ -1,18 +1,44 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block title %}Imagine-X{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGINE-X</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-{% block content %}
-<form action="generate" method="post">
-    <div class="search-container">
-        <div class="row">
-            <div class="col-md-8">
-                <input type="text" class="search-input" name="search_text" placeholder="Enter the description..." />
-            </div>
-            <div class="col-md-4">
-                <button type="submit" class="search-button">Search</button>
-            </div>
+<body>
+    <header>
+        <input type="checkbox" name="" id="chk">
+        <div class="logo">
+            <h1>IMAGINE-X</h1>
         </div>
-    </div>
-</form>
-{% endblock %}
+        <div class="search-box">
+            <form action="generate" method="post">
+                <input type="text" name="search_text" id="srch" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li>
+                <a href="#"><i class="fab fa-facebook"></i>
+                </a><a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+        <div class="menu">
+            <label for="chk">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+</body>
+
+</html>

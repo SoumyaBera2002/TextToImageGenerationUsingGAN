@@ -1,109 +1,138 @@
-body {
-    background-image: url("../images/Bg-img.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Itim&family=Montserrat:wght@500&family=Poppins:wght@300;400;700&family=Sofia+Sans+Extra+Condensed:ital@1&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    position: relative;
-    background-position: center center;
-    min-height: 100vh;
-    min-width: 1000px;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.573);
+body {
+    background-image: url("../images/Bg-img.jpg");
+    background-repeat: no-repeat;
+    background-size: 1588px 750px;
 }
 
-.navbar-textc {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    background-color: rgba(0, 0, 0, 0.475);
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-left: 20%;
-    margin-top: 17%;
-}
-
-.search-input {
+header {
     width: 100%;
-    min-width: 700px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 35px;
-    font-size: 16px;
-    outline: none;
-    background-color: rgba(0, 0, 0, 0.76);
-    color: white;
-    caret-color: white;
-    margin-left: 0.5%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px black;
 }
 
-.search-button {
-    padding: 10px 25px;
-    background-color: rgba(0, 0, 0, 0.758);
-    border: 1px solid black;
-    border-radius: 15px;
-    font-weight: 700;
+#chk {
+    display: none;
+}
+
+i {
     color: white;
-    font-size: 16px;
     cursor: pointer;
-    margin-left: 60%; /* Adjust the margin as needed */
 }
 
-.search-button:hover {
-    background-color: whitesmoke;
-    color: black;
+header .logo {
+    flex: 1;
+    color: white;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        background-size: cover;
-        background-position: center;
+header .search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 30px;
+    color: grey;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: green;
+}
+
+header ul {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+header ul li a:hover {
+    border-bottom: 2px solid cadetblue;
+}
+
+header .menu {
+    font-size: 2.5rem;
+    display: none;
+}
+
+@media(max-width:1000px) {
+    .search-box button {
+        position: absolute;
     }
 
-    .navbar {
+    header ul {
+        position: fixed;
+        top: 100px;
+        background: black;
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    #chk:checked~ul {
+        right: 0;
+    }
+}
+
+@media(max-width:100px) {
+    header .logo {
+        font-size: 5px;
+        margin-left: 8px;
+    }
+
+    header ul {
         width: 100%;
-        height: 200px;
-    }
-
-    .search-container {
-        width: 95%;
-        padding: 15px;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        justify-content: center; /* Center vertically */
-        align-items: center; /* Center horizontally */
-        margin-top: 50%;
-        margin-left: 2.5%;
-    }
-
-    .search-input {
-        width: 100%; /* Expand to full container width */
-        height: 100px;
-        padding: 15px;
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    .search-button {
-        width: 100%; /* Expand to full container width */
-        height: 100px;
-        padding: 15px 20px;
-        font-size: 18px;
-        font-weight: 700;
-        margin-left: 0;
     }
 }
-
