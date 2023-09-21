@@ -9,9 +9,17 @@
 
 body {
     background-image: url("../images/Bg-img.jpg");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size: 1588px 1200px;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-position: center center;
+    min-height: 100vh;
+    min-width: 1000px;
 }
+
 
 header {
     width: 100%;
@@ -99,7 +107,7 @@ header .menu {
     display: none;
 }
 
-@media(max-width:1000px) {
+@media (max-width: 600px) {
     .search-box button {
         position: absolute;
     }
@@ -109,10 +117,11 @@ header .menu {
         top: 100px;
         background: black;
         height: calc(100vh - 100px);
-        width: 50%;
+        width: 100%; /* Full width for mobile */
         flex-direction: column;
         align-items: center;
         transition: right 0.5s linear;
+        right: -100%;
     }
 
     header .menu {
@@ -121,18 +130,12 @@ header .menu {
         text-align: center;
     }
 
-    #chk:checked~ul {
+    #chk:checked ~ ul {
         right: 0;
     }
-}
 
-@media(max-width:100px) {
     header .logo {
-        font-size: 5px;
-        margin-left: 8px;
-    }
-
-    header ul {
-        width: 100%;
+        font-size: 18px; /* Increased font size for mobile readability */
+        margin-left: 0; /* No margin on mobile for better spacing */
     }
 }
